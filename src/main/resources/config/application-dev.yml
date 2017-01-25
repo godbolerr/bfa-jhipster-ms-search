@@ -20,7 +20,7 @@ eureka:
         registerWithEureka: true
         fetchRegistry: true
         serviceUrl:
-            defaultZone: http://admin:admin@localhost:8761/eureka/
+            defaultZone: http://admin:admin@10.142.129.23:8761/eureka/
 
 spring:
     profiles:
@@ -35,7 +35,7 @@ spring:
         serialization.indent_output: true
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:h2:file:./target/h2db/db/searchms2;DB_CLOSE_DELAY=-1
+        url: jdbc:h2:file:./target/h2db/db/searchms12;DB_CLOSE_DELAY=-1
         name:
         username: searchms
         password:
@@ -73,7 +73,7 @@ server:
 jhipster:
     security:
         client-authorization:
-            accessTokenUri: http://uaa/oauth/token
+            accessTokenUri: http://10.142.129.23/uaa/oauth/token
             tokenServiceId: uaa
             clientId: internal
             clientSecret: internal
@@ -95,8 +95,8 @@ jhipster:
             reportFrequency: 60 # in seconds
     logging:
         logstash: # Forward logs to logstash over a socket, used by LoggingConfiguration
-            enabled: false
-            host: localhost
+            enabled: true
+            host: 10.142.129.23
             port: 5000
             queueSize: 512
         spectator-metrics: # Reports Spectator Circuit Breaker metrics in the logs

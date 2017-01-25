@@ -155,7 +155,7 @@ public class SearchFlightServiceImpl implements SearchFlightService{
 				
 
 				restTemplate.exchange(
-						"http://localhost:11000/bookms/api/inventories", HttpMethod.POST, entity,
+						"http://10.142.129.23:11000/bookms/api/inventories", HttpMethod.POST, entity,
 						new ParameterizedTypeReference<InventoryDTO>() {
 						});
 
@@ -178,7 +178,7 @@ public class SearchFlightServiceImpl implements SearchFlightService{
 				
 
 				restTemplate.exchange(
-						"http://localhost:11000/faresms/api/fares", HttpMethod.POST, fareEntity,
+						"http://10.142.129.23:11000/faresms/api/fares", HttpMethod.POST, fareEntity,
 						new ParameterizedTypeReference<FaresDTO>() {
 						});
 
